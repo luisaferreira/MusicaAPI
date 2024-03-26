@@ -26,5 +26,14 @@ namespace MusicaAPI.Controllers
         {
             return StatusCode(200, musicas);
         }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult Inserir(Musica musica)
+        {
+            musicas.Add(musica);
+
+            return StatusCode(201);
+        }
     }
 }
