@@ -24,7 +24,7 @@ namespace MusicaAPI.Controllers
         [AllowAnonymous]
         public IActionResult Obter()
         {
-            return StatusCode(200, musicas);
+            return Ok(musicas);
         }
 
         [HttpPost]
@@ -33,7 +33,7 @@ namespace MusicaAPI.Controllers
         {
             musicas.Add(musica);
 
-            return StatusCode(201);
+            return Created();
         }
     }
 }
