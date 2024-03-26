@@ -22,12 +22,12 @@ jobs:
 
     - name: Instalando dependências
       run: dotnet restore
-      working-directory: MusicaAPI/MusicaAPI
+      working-directory: ./MusicaAPI
 
     - name: Compilando o projeto
       run: dotnet build
-      working-directory: MusicaAPI/MusicaAPI
+      working-directory: ./MusicaAPI
     
     - name: Test
       run: dotnet test
-      working-directory: MusicaAPI/MusicaAPI.Tests
+      working-directory: ./MusicaAPI.Tests
